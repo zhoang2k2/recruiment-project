@@ -1,0 +1,58 @@
+#career-level {
+    padding-top: 20px;
+    padding-bottom: 80px;
+
+    .career-level-container {
+        display: flex;
+        gap: 15px;
+        margin: auto;
+        width: 1440px;
+        // overflow-x: hidden;
+    }
+}
+
+.career-level-card {
+    border: 3px solid #5a3689;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+    text-decoration-line: none;
+    padding: 15px;
+
+    &:hover {
+        box-shadow: 0 0 15px 2px rgba(0, 0, 0, .25);
+        transition: .5s;
+    }
+
+    .job-level-title {
+        img {
+            display: block;
+            border-radius: 10px;
+            object-fit: cover;
+            width: 300px;
+            height: 150px;
+            margin: auto;
+        }
+    
+        h2 {
+            font-size: 22px;
+            text-transform: capitalize;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+    .total-job-level {
+        margin-top: 10px;
+
+        p {
+            text-align: center;
+
+            span {
+                font-size: 20px;
+                font-family: LexenSemiBold;
+                margin-right: 3px;
+            }
+        }
+    }
+}

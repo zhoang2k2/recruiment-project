@@ -1,0 +1,80 @@
+.jobs-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    height: 700px;
+    width: 1440px;
+    margin: auto;
+    padding: 10px 10px;
+    overflow: hidden;
+
+    .job-card {
+        border: 1px solid  rgba(0, 0, 0, .35);
+        border-radius: 10px;
+        cursor: pointer;
+        color: #000;
+        text-decoration-line: none;
+        display: flex;
+        flex-direction: row;
+        width: 450px;
+        height: 144px;
+        padding: 15px 5px;
+        transition: transform 0.2s ease-out;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    
+        .company-logo {
+            display: flex;
+            align-items: center;
+            margin-left: -7.5px;
+            margin-right: 5px;
+            
+            img {
+                width: 100px;
+                padding: 0 10px;
+            }
+        }
+
+        .job-content{
+            width: 100%;
+            margin-right: 10px;
+
+            p {
+                font-size: 12px;
+            }
+
+            .job-main-content{
+                a {
+                    color: #646464;
+                    font-family: LexenSemiBold;
+                    text-decoration-line: none;
+                }
+
+                p {
+                    margin-top: 5px;
+
+                    span {
+                        border: 1px solid rgba(0, 0, 0, .50);
+                        border-radius: 3px;
+                        font-family: 'LexenSemiBold';
+                        font-size: 16px !important;
+                        padding: 0px 4px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .job-sub-content {
+                border-top: 1px solid rgba(0, 0, 0, .1);
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                padding-top: 5px;
+            }
+        }
+    }
+}

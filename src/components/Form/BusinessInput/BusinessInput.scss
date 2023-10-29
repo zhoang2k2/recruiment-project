@@ -1,0 +1,117 @@
+.business-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 25px;
+    width: 600px;
+
+    p {
+        font-weight: bold;
+        margin-bottom: 5px;
+        transition: .25s;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid rgba($color: #7c28f1, $alpha: .25);
+        height: 30px;
+        padding-left: 5px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            font-family: LexenThin;
+            font-weight: bold;
+            font-size: 14px;
+            font-style: italic;
+            opacity: .75;
+        }
+    }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        font-family: LexenSemiBold;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        background-color: #7c28f1;
+        width: 100%;
+        height: 50px;
+    
+        background-color: #7c28f1;
+        background-size: 5000% 100%;
+        transition: background-color 1s, letter-spacing .5s;
+    
+        &:hover {
+            background-color: #E625BC;
+            font-size: 16px;            
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.name-hotline,
+.service-question {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    input {
+        width: 100%;
+    }
+}
+
+.email {
+    input {
+        width: 100%;
+    }
+}
+
+.additional-question {
+
+    textarea {
+        border: 1px solid rgba($color: #000, $alpha: .2);
+        border-radius: 7px;
+        padding: 10px;
+        width: 100%;
+        height: 100px;
+        resize: none;
+
+        &::placeholder {
+            font-family: LexenRegular;
+        }
+    }
+    
+    &:hover p {
+        color: #7c28f1;
+    }
+}
+
+.business-name, .business-hotline, .email , .service-concern, .question {
+    &::after {
+        border-radius: 20px;
+        // background-color: #7c28f1;
+        background-image: linear-gradient(to right, #7c28f1,#E625BC);
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        translate: 0 -2px;
+        transform: scale(0);
+        transform-origin: right;
+        transition: transform 1s;
+    }
+
+    &:hover::after {
+        transform: scale(1);
+        transform-origin: left;
+    }
+
+    &:hover p {
+        color: #7c28f1;
+    }
+}
