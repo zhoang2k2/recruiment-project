@@ -1,40 +1,31 @@
-// import { Link } from "react-router-dom";
-import JobsData from "./JobsData";
+import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
-export function JobCards () {
+export function JobCards ({ job }) {
 
     return (
         <>
-            {JobsData.map((data, index) => {
-                if (data.position === "") {
-                    return null
-                } else {
-                    return (
-                        <div
-                            className="job-card"
-                            key={index}
-                        >
-                            <div className="company-logo">
-                                <img src={data.img} alt={data.alt}/>
-                            </div>
-            
-                            <div className="job-content">
-                                <div className="job-main-content">
-                                    <h4>{data.position}</h4>
-                                    <a href="#">{data.company}</a>
-                                    <p>Net Salary <span>{data.salary}$</span></p>
-                                </div>
-            
-                                <div className="job-sub-content">
-                                    <p>{data.exp}</p>
-                                    <p>{data.location}</p>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                } 
-            })}
+            <Link
+                className="job-card"
+                to={`${job.company}/${job.position}`}
+            >
+                <div className="company-logo">
+                    <img src={job.img} alt={job.alt}/>
+                </div>
+
+                <div className="job-content">
+                    <div className="job-main-content">
+                        <h4>{job.position}</h4>
+                        <a href="#">{job.company}</a>
+                        <p>Net Salary <span>{job.salary}$</span></p>
+                    </div>
+
+                    <div className="job-sub-content">
+                        <p>{job.exp}</p>
+                        <p>{job.location}</p>
+                    </div>
+                </div>
+            </Link>
         </>
     )
 }

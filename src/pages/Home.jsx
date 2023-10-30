@@ -1,16 +1,16 @@
 import '../views/App/App.scss';
 import '../views/App/assets/fonts/fonts.css';
 
-import Navbar from "../components//NavBar/Navbar";
+import Navbar from "../components/NavBar/Navbar";
 import FilterBox from "../components/Header/FilterBox/FilterBox";
 import VideosAndSurveys from '../components/Header/VideosAndSurvey/VideosAndSurveys';
 import { SubSlider } from "../components/SubSlider/SubSlider";
 import { CareerLevelCard } from "../components/CareerLevel/CareerLevelCard";
-import { JobList } from '../components/JobList/JobList';
 import HandBook from "../components/HandbookSection/Handbook";
 import AuthorInfo from '../components/Form/AuthorInfo/AuthorInfo';
 import BusinessInput from '../components/Form/BusinessInput/BusinessInput';
 import Footer from '../components/Footer/Footer';
+import { PaginationLogic } from '../components/Pagination/PaginationLogic';
 
 
 export default function Home () {
@@ -42,7 +42,11 @@ export default function Home () {
 
                 <div id="content">
                     <h1>List of vacant positions</h1>
-                    <JobList />
+                    <div className="content-container">
+                        <div className="white-bg">
+                            <PaginationLogic />
+                        </div>
+                    </div>
                 </div>
 
                 <div id="form">

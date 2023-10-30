@@ -1,6 +1,6 @@
 import Home from "../../pages/Home";
 import { FilterCareerLevel } from "../../pages/FilteredCareerLevel";
-// import JobDescription from "../../pages/JobDescription";
+import JobDescription from "../../pages/JobDescription";
 
 
 import { Routes , Route } from "react-router-dom"
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/career-level/:level" element={<FilterCareerLevel />} />
-        {/* <Route path="/:company" element={<JobDescription />} /> */}
+        <Route path="/:company/:position" element={<JobDescription />} />
       </Routes>
     </>
   )
