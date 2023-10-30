@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { JobCards } from "./JobCards";
-import './Joblist.scss'
+import './JobList.scss';
 
 
 // eslint-disable-next-line react/prop-types
