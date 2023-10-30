@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import JobsData from '../JobList/JobsData';
-import { JobList } from '/d1/learn/recruitment-project/src/components/joblist/joblist';
 import Pagination from './Pagination';
+import { JobList } from '../JobList/JobList';
 
 import { useState } from 'react';
 
